@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>GSBD</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -260,34 +260,36 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+              <span class="pl-2">
+                <button type="button" id="sidebarCollapse" class="btn btn-light-blue ">
+                  <i class="fas fa-align-left"></i>
+                  <span class="ml-1"> Menu</span>
+              </button>
+              </span>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a href="#" class="notification p-2">
+                        <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                        <span class="badge p2">3</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login/ Signup</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page</a>
+                    </li> -->
+                </ul>
+            </div>
             </nav>
 
             <!-- <h2>Collapsible Sidebar Using Bootstrap 4</h2>
@@ -319,148 +321,173 @@
   <div class="container-fluid" style="margin-top:30px;">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="font-weight-bold"><a href="#">Trending products</a></h2>
+        <div class="row">
+          <div class="col pl-0">
+            <h2 class="font-weight-bold"><a href="#">Trending products</a></h2>
+          </div>
+          <div class="col text-right">
+            
+            <button type="button" class="btn btn-sm btn-outline-dark">See More</button>
+          </div>
+        </div>
+        
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="column">
-        <div class="product-card border">
-          <div class="badge">Hot</div>
-          <div class="product-tumb">
-            <img src="https://i.imgur.com/0xeImLb.jpg" alt="">
-          </div>
-          <div class="product-details p-3">
-            <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span>
-            <h6><a href="">Random PREMIUM 5 Keys Steam Key GLOBAL</a></h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
-            <div class="product-bottom-details">
-              <div class="product-price"><small>$96.00</small>$230.99</div>
-              <div class="product-links">
-                <a href=""><i class="fa fa-heart"></i></a>
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
+    <div class="row mb-md-2">
+      <div class="column d-flex">
+          <div class="card shadow-sm border-light mb-4 flex-fill">
+              <a href="#" class="position-relative">
+                <span class="badge badge-pill badge-secondary">22%</span>
+                  <img src="./img/fm.jpg" class="card-img-top" alt="image"> </a>
+              <div class="card-body p-3 bg-light-blue">
+                  <a href="#">
+                      <h6 class="text-white">Football Manager 2021</h6>
+                  </a>
+                  
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="col pl-0 pr-2 ">
+                      <span class="p text-light opacity-2"><s>350 BDT</s></span> &nbsp; <span class="p text-warning">250 BDT</span>
+                    </div>
+                   
+                   
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+                  <div class="col pl-0 pr-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue-yellow rounded-0"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                  </div>
+                 
+                  <div class="col pr-0 pl-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue rounded-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <div class="row">
-        <div class="column">
-          <div class="product-card border">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-              <img src="https://i.imgur.com/0xeImLb.jpg" alt="">
-            </div>
-            <div class="product-details p-3">
-              <!-- <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span> -->
-              <h6><a href="">Random PREMIUM 5 Keys Steam Key GLOBAL</a></h6>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p> -->
-              <div class="product-bottom-details">
-                <div class="product-price">
-                  <small  class="opacity-2">$96.00</small><br>
-                  <font>$230.99</font>
-                </div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
-                </div>
+
               </div>
-            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="product-card border">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-              <img src="https://i.imgur.com/0xeImLb.jpg" alt="">
-            </div>
-            <div class="product-details p-3">
-              <!-- <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span> -->
-              <h6><a href="">Ghost of Tsushima (PS4) - Physical Copy</a></h6>
-              
-              <div class="product-bottom-details">
-                <div class="product-price">
-                  <small  class="opacity-2">$96.00</small><br>
-                  <font>$230.99</font>
-                </div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="product-card border">
-            <div class="badge">Hot</div>
-            <div class="product-tumb ">
-              <img src="https://i.imgur.com/imHaoqY.jpg" alt="">
-            </div>
-            <div class="product-details p-3">
-              <!-- <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span> -->
-              <h6><a href="">Overwatch Battle.net Key GLOBAL</a></h6>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p> -->
-              <div class="product-bottom-details">
-                <div class="product-price">
-                  <small  class="opacity-2">$96.00</small><br>
-                  <font>$230.99</font>
-                </div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="product-card border">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-              <img src="https://i.imgur.com/0xeImLb.jpg" alt="">
-            </div>
-            <div class="product-details p-3">
-              <!-- <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span> -->
-              <h6><a href="">Random PREMIUM 5 Keys Steam Key GLOBAL</a></h6>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p> -->
-              <div class="product-bottom-details">
-                <div class="product-price">
-                  <small  class="opacity-2">$96.00</small><br>
-                  <font>$230.99</font>
-                </div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="product-card border ">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-              <img src="https://i.imgur.com/0xeImLb.jpg" alt="">
-            </div>
-            <div class="product-details p-3">
-              <!-- <span class="product-catagory">XBOX ONE, XBOX ONE SUBSCRIPTIONS</span> -->
-              <h6><a href="">Random PREMIUM 5 Keys Steam Key GLOBAL</a></h6>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p> -->
-              <div class="product-bottom-details">
-                <div class="product-price">
-                  <small  class="opacity-2">$96.00</small><br>
-                  <font>$230.99</font>
-                </div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="column d-flex">
+        <div class="card shadow-sm border-light mb-4 flex-fill">
+            <a href="#" class="position-relative">
+              <span class="badge badge-pill badge-secondary">22%</span>
+                <img src="./img/fm.jpg" class="card-img-top" alt="image"> </a>
+            <div class="card-body p-3 bg-light-blue">
+                <a href="#">
+                    <h6 class="text-white">Football Manager 2021</h6>
+                </a>
+                
+                <div class="d-flex justify-content-between mb-3">
+                  <div class="col pl-0 pr-2 ">
+                    <span class="p text-light opacity-2"><s>350 BDT</s></span> &nbsp; <span class="p text-warning">250 BDT</span>
+                  </div>
+                 
+                 
+              </div>
+
+
+              <div class="d-flex justify-content-between">
+                <div class="col pl-0 pr-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue-yellow rounded-0"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                </div>
+               
+                <div class="col pr-0 pl-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue rounded-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="column d-flex">
+      <div class="card shadow-sm border-light mb-4 flex-fill">
+          <a href="#" class="position-relative">
+            <span class="badge badge-pill badge-secondary">22%</span>
+              <img src="./img/fm.jpg" class="card-img-top" alt="image"> </a>
+          <div class="card-body p-3 bg-light-blue">
+              <a href="#">
+                  <h6 class="text-white">Football Manager 2021</h6>
+              </a>
+              
+              <div class="d-flex justify-content-between mb-3">
+                <div class="col pl-0 pr-2 ">
+                  <span class="p text-light opacity-2"><s>350 BDT</s></span> &nbsp; <span class="p text-warning">250 BDT</span>
+                </div>
+               
+               
+            </div>
+
+
+            <div class="d-flex justify-content-between">
+              <div class="col pl-0 pr-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue-yellow rounded-0"><i class="fa fa-heart" aria-hidden="true"></i></button>
+              </div>
+             
+              <div class="col pr-0 pl-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue rounded-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></div>
+          </div>
+
+          </div>
+      </div>
+  </div>
+  <div class="column d-flex">
+    <div class="card shadow-sm border-light mb-4 flex-fill">
+        <a href="#" class="position-relative">
+          <span class="badge badge-pill badge-secondary">22%</span>
+            <img src="./img/fm.jpg" class="card-img-top" alt="image"> </a>
+        <div class="card-body p-3 bg-light-blue">
+            <a href="#">
+                <h6 class="text-white">Football Manager 2021</h6>
+            </a>
+            
+            <div class="d-flex justify-content-between mb-3">
+              <div class="col pl-0 pr-2 ">
+                <span class="p text-light opacity-2"><s>350 BDT</s></span> &nbsp; <span class="p text-warning">250 BDT</span>
+              </div>
+             
+             
+          </div>
+
+
+          <div class="d-flex justify-content-between">
+            <div class="col pl-0 pr-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue-yellow rounded-0"><i class="fa fa-heart" aria-hidden="true"></i></button>
+            </div>
+           
+            <div class="col pr-0 pl-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue rounded-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<div class="column d-flex">
+          <div class="card shadow-sm border-light mb-4 flex-fill">
+              <a href="#" class="position-relative">
+                <span class="badge badge-pill badge-secondary">22%</span>
+                  <img src="./img/fm.jpg" class="card-img-top" alt="image"> </a>
+              <div class="card-body p-3 bg-light-blue">
+                  <a href="#">
+                      <h6 class="text-white">Football Manager 2021</h6>
+                  </a>
+                  
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="col pl-0 pr-2 ">
+                      <span class="p text-light opacity-2"><s>350 BDT</s></span> &nbsp; <span class="p text-warning">250 BDT</span>
+                    </div>
+                   
+                   
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+                  <div class="col pl-0 pr-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue-yellow rounded-0"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                  </div>
+                 
+                  <div class="col pr-0 pl-0"><button type="button" class="btn btn-sm btn-block btn-outline-blue rounded-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+      
+      
+      
+    
+  </div>
+    
+      
+     
       
 
 
